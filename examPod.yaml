@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: exam-pod
+spec:
+  serviceAccountName: exam
+  containers:
+  - name: busy
+    image: bitnami/kubectl
+    command: ["sleep", "3600"]
+

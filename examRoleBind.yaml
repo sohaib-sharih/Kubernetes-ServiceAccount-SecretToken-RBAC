@@ -1,0 +1,13 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: exam-pod-binding
+subjects:
+- kind: ServiceAccount
+  name: exam
+  namespace: default
+roleRef:
+  kind: Role
+  name: exam-reader
+  apiGroup: rbac.authorization.k8s.io
+

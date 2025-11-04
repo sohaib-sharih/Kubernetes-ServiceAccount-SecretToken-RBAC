@@ -77,3 +77,9 @@ Test the ability of the serviceAccount to send requests to the kube-apiserver
 1. kubectl exec -it sa-exam -- sh
 2. Run - > kubectl get pods, kubectl get depoyments
 ```
+
+5. A **ServiceAccount** can be used by:
+	a. **Pods** (most common) — to access the API server.
+    b. **Jobs / CronJobs** — for tasks needing limited API access.
+    c. **Deployments / ReplicaSets / DaemonSets / StatefulSets** — their pods inherit the ServiceAccount.
+    d. **Controllers** (e.g., custom controllers, operators) — to manage cluster resources securely.
